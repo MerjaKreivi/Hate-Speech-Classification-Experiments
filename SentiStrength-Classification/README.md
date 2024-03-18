@@ -23,7 +23,7 @@ Original SentStrength methods have been published by Thewall et. all. - referenc
 
 The original versions of SentiStrength methods available at: 
 
-    http://sentistrength.wlv.ac.uk/#Download
+- http://sentistrength.wlv.ac.uk/#Download
 
 
 
@@ -70,5 +70,10 @@ The modified SentiStrength (for Finnish social media text samples) use new Finni
 
 - BoosterWordList - On booster words lexicon 'BoosterWordList.txt' each entry is labeled with one sentiment label (between -5 and 5). 'BoosterWordList' (for Finnish) includes 20 entries.
 
-New modified (and old unmodified) lexicons for Finnish SentiStrength models are available at 'Finnish_SentiStrength' -folder. All experiments with SentiStrength -models were carried with lexicons mentioned above. The folder was added on the wheel of SentiStrength -methods as 'SentiStrength_FIN' -folder.
+New modified (and old unmodified) lexicons for Finnish SentiStrength models are available at 'Finnish_SentiStrength' -folder. 
+
+
+### Installation and Set Up
+
+All experiments with SentiStrength -models were carried with lexicons mentioned above. The folder was added on the wheel of SentiStrength -methods as 'SentiStrength_FIN' -folder.
 
