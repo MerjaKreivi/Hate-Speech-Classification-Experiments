@@ -54,13 +54,9 @@ Samples were preprpcessed with two steps:
 Results were analyzed with methods of scikit-learn library by calculating confusion matrix, and accuracy, F1, precision and recall scores for tested classifiers.
 
 
-### Improved new lexicons for SentiStrength
+### Improved new lexicons for SentiStrength (in Finnish)
 
-The modified SentiStrength (for Finnish social media text samples) use new Finnish SentiStrength lexicon for sentiment classification. 
-
-Finnish SentiStrength for classification of Finnish social media text uses lexicon which includes basic, pended, subword and lemma forms of words and their polarity labels.
-
-All lexicons (words, emoticons, emojis) were provided on lexicographically descending order to enable more precise text, emoticon, symbol, and emoji matching.
+The modified SentiStrength (for Finnish social media text samples) use new Finnish SentiStrength lexicons for sentiment classification. Finnish SentiStrength for classification of Finnish text uses lexicon which includes basic, pended, subword and lemma forms of words and their polarity labels. All lexicons (words, emoticons, emojis) were provided on lexicographically descending order to enable more precise text, emoticon, symbol, and emoji matching.
 
 - EmotionLookupTable - On (word based sentiment) emotion lexicon 'EmotionLookupTable.txt' each word is labeled with one sentiment label (between -5 and 5). New 'EmotionLookupTable' (for Finnish) includes 11512 word forms.
 
@@ -71,4 +67,8 @@ All lexicons (words, emoticons, emojis) were provided on lexicographically desce
 - NegatingWordList - On negating word lexicon 'NegatingWordList.txt' each entry is labeled with one sentiment label (between -5 and 5). New 'NegatingWordList' (for Finnish) includes 37 entries.
 
 - QuestionWords - On question words lexicon 'QuestionWords.txt' each entry is labeled with one sentiment label (between -5 and 5). New 'QuestionWords' (for Finnish) includes 19 entries.
+
+- BoosterWordList - On booster words lexicon 'BoosterWordList.txt' each entry is labeled with one sentiment label (between -5 and 5). 'BoosterWordList' (for Finnish) includes 20 entries.
+
+New modified (and old unmodified) lexicons for Finnish SentiStrength models are available at 'Finnish_SentiStrength' -folder. All experiments with SentiStrength -models were carried with lexicons mentioned above. The folder was added on the wheel of SentiStrength -methods as 'SentiStrength_FIN' -folder.
 
