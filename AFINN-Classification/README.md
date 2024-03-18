@@ -33,36 +33,37 @@ to enable more precise text, emoticon, symbol and emoji matching.
 
 Text based emotion sentiment lexicons included labels for 9990 word forms.
 
-    - fin_afinn_HS_binary_MerjasList_2023.txt
-    - fin_afinn_binary_MerjasList_2023.txt
-    - fin_afinn_trinary_MerjasList_2023.txt
-    - fin_afinn_polarity_MerjasList_2023.txt
+- fin_afinn_binary_MerjasList_2023.txt
+- fin_afinn_trinary_MerjasList_2023.txt
+- fin_afinn_polarity_MerjasList_2023.txt
+- fin_afinn_HS_binary_MerjasList_2023.txt
 
 Emoticon sentiment lexicons included labels for 593 emoticons.
 The emoticon ":D" and the corresponding emoticons and symbols written in capital letters 
 is now matched as all emoticons can be found as corresponding lower cap forms
 on emoticon sentiment lexicons:
 
-    - afinn_emoticon_binary_MerjasList_2023.txt
-    - afinn_emoticon_polarity_MerjasList_2023.txt
+- afinn_emoticon_binary_MerjasList_2023.txt
+- afinn_emoticon_polarity_MerjasList_2023.txt
 
 Emoji sentiment lexicons included labels for 613 emojis.
 
-    - afinn_emoji_polarity_MerjasList_2023.txt
-    - afinn_emoji_binary_MerjasList_2023.txt
+- afinn_emoji_binary_MerjasList_2023.txt
+- afinn_emoji_trinary_MerjasList_2023.txt
+- afinn_emoji_polarity_MerjasList_2023.txt
 
 
 ### Changes and modifications in original AFINN script
 
 The Original AFinn class was replaced with
 
-    - AFinnEmoticons class,
-    - AFinnWords class, and
-    - AfinnEmojis class
+- AFinnEmoticons class,
+- AFinnWords class, and
+- AfinnEmojis class
 
 The AFinnWords class includes small changes in script. For example, the AFinnWords class was used with 'word_boundary=True' flag to enable more precise text matching.
 
 New flags were added to AFinnEmoticons and AFinnEmojis classes. The AFinnEmoticons and AFinnEmojis classes can be used with 'emoticons_only=True' or 'emoticons_only=True' flag to enable text sample matching with emoticons or emojis only.
 
-    - AFinnEmoticons class has 'emoticons_only' flag
-    - AFinnEmojis class has 'emojis only' flag
+- AFinnEmoticons class has 'emoticons_only' flag
+- AFinnEmojis class has 'emojis only' flag
