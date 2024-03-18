@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# data
+*.xlsx
+AFINN-Classification/AFINNfin/DATA/Manually_Annotated_Collection_ALL_FINAL_22023Merja.xlsx
+AFINN-Classification/AFINNfin/DATA/Balanced_Dataset_Collection_ALL_2023Merja.xlsx
+
