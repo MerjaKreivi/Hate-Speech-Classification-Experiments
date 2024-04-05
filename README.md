@@ -1,11 +1,10 @@
 # Hate Speech and Sentiment Classification Experiments
 
-The experiments expand sentiment classification and HS detection methods to urban and dialectal language types of unstructured and semi-structured text data. 
+The experiments evaluate and expand sentiment analysis (SA) and hate speech detection (HSD) methods to urban, granulated and dialectal language types of unstructured and semi-structured text data. 
 
-The experiments applied comparative (HS related) sentiment and dimension specific text classification algorithms on Finnish social media samples. 
-
-Four basic and simple ML models were designed for classification of sentiment and polarization predictions, 
-and classification of HS and HS strength dimension predictions (Figure below). 
+The experiments applied comparative sentiment and hate speech (HS) classification algorithms on Finnish social media samples. 
+Four basic and simple ML models were designed for classification of trinary sentiment, multilabel polarization, 
+classification of binary HS predictions and multilabel HS strength dimension predictions (Figure below). 
 
 ![Alt text](images/classification_models.png)
 
@@ -13,9 +12,9 @@ Figure. SA and HSD was studied by sentiment, polarity, HS binary, and HS strengt
 
 
 
-Experiments evaluated Finnish NLP methods on text preprocessing and embedding steps. 
-
 ## Pre-processing and Finnish Spacy+Voikko method
+
+Experiments evaluated Finnish NLP methods on text preprocessing and embedding steps. 
 
 Experiments including preprocessing steps tested the effect of lemmatization with Finnish Spacy+Voikko method to classification results.
 When classifications were evaluated for lemmatized samples, the lemmatization was carried out with experimental Finnish Voikko method 
