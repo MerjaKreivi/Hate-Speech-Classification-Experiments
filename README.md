@@ -1,14 +1,22 @@
 # Hate Speech and Sentiment Classification Experiments
 
-The experiments evaluate and expand sentiment analysis (SA) and hate speech detection (HSD) methods to urban, granulated and dialectal language types of unstructured and semi-structured text data. 
 
-The experiments applied comparative sentiment and hate speech (HS) classification algorithms on Finnish social media samples. 
-Four basic and simple ML models were designed for classification of trinary sentiment, multilabel polarization, 
-classification of binary HS predictions and multilabel HS strength dimension predictions (Figure below). 
+## Introduction 
+
+The design and development of 'Hate Speech Annotation Framework' (HS Annotation Framework) 
+is based on the research work reported on (Master’s Thesis) research paper - 
+
+Merja Kreivi-Kauppinen (2024) Hate Speech Detection of Dialectal, Granular and Urban Finnish. University of Oulu, Degree Programme in Computer Science and Engineering. Master’s Thesis, 111 p.
 
 ![Alt text](images/classification_models.png)
 
 Figure. SA and HSD was studied by sentiment, polarity, HS binary, and HS strength classification methods..
+
+The experiments evaluate and expand sentiment analysis (SA) and hate speech detection (HSD) methods to urban, granular and dialectal language types of unstructured and semi-structured text data. 
+
+The experiments applied comparative sentiment and hate speech (HS) classification algorithms on Finnish social media samples. 
+Four basic and simple ML models were designed for classification of trinary sentiment, multilabel polarization, 
+classification of binary HS predictions and multilabel HS strength dimension predictions (Figure below). 
 
 
 
