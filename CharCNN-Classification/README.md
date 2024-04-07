@@ -12,6 +12,14 @@ University of Oulu, Degree Programme in Computer Science and Engineering. Master
 
 ## Introduction
 
+High granulation and noise rate of common social media content makes the task of pattern analysis of HSD a highly complex practice, where one-hot encoding is the most basic way to turn a text sample into a token vector. 
+
+One-hot encoding of text samples can be done at the character level. Evaluated character level classification experiments applied original fixed length character-based CNN (CharCNN) models.
+
+CharCNN classification models use one-hot encoding vectors as an input for the network. CharCNN models extract every character in text on feature vector, and as such, text features are not limited to alphabets, but also numbers, punctuations, and character-level symbols and combinations can be used as features. 
+
+Designed CNN algorithm included one-dimensional (1D) convolution kernels which are convoluted with the input matrix on a convolution layer. The convolution operation builds up the characteristic graph of input matrix and local features. The aim of character-based convolution operation is to stepwise capture the local relationships between words, characters, and symbols. The convolution kernel performs convolution operation on the input matrix while sliding a defined window step-by-step thorough the matrix. With sliding windows, convolutions can learn word morphologies, non-separated words, and misspelled words without any knowledge of the language.
+
 
 
 ![alt text](images/CharCNN.png)
@@ -42,18 +50,6 @@ Original 'Character-level convolutional networks for text classification' -metho
 
 
 
-## Character CNN based Classification
-
-High granulation and noise rate of common social media content makes the task of pattern analysis of HSD a highly complex practice, where one-hot encoding is the most basic way to turn a text sample into a token vector. 
-
-One-hot encoding of text samples can be done at the character level. Evaluated character level classification experiments applied original fixed length character-based CNN (CharCNN) models.
-
-CharCNN classification models use one-hot encoding vectors as an input for the network. CharCNN models extract every character in text on feature vector, and as such, text features are not limited to alphabets, but also numbers, punctuations, and character-level symbols and combinations can be used as features. 
-
-Designed CNN algorithm included one-dimensional (1D) convolution kernels which are convoluted with the input matrix on a convolution layer. The convolution operation builds up the characteristic graph of input matrix and local features. The aim of character-based convolution operation is to stepwise capture the local relationships between words, characters, and symbols. The convolution kernel performs convolution operation on the input matrix while sliding a defined window step-by-step thorough the matrix. With sliding windows, convolutions can learn word morphologies, non-separated words, and misspelled words without any knowledge of the language.
-
-
-
 ## Characters
 
 The input matrixes of CharCNN models were designed for 112 characters. The same alphabet, numeric, and special characters as on the original design were used, but some European alphabets (åäöäöåéíß), uppercases, special characters, and special tokens were added.
@@ -62,6 +58,7 @@ The input matrixes of CharCNN models were designed for 112 characters. The same 
  - ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÅÉÍ
  - !"#$%&\'()*+,./:;<=>?@[\\]^_`{|}~´”€|£ 
  - UNK PAD
+
 
 
 ## One-hot vectors
