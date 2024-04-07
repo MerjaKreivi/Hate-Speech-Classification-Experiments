@@ -58,10 +58,10 @@ Designed CNN algorithm included one-dimensional (1D) convolution kernels which a
 
 The input matrixes of CharCNN models were designed for 112 characters. The same alphabet, numeric, and special characters as on the original design were used, but some European alphabets (åäöäöåéíß), uppercases, special characters, and special tokens were added.
 
- Abcdefghijklmnopqrstuvwxyzäöåéíß 0123456789
- ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÅÉÍ
- !"#$%&\'()*+,./:;<=>?@[\\]^_`{|}~´”€|£ 
- UNK PAD
+ - Abcdefghijklmnopqrstuvwxyzäöåéíß 0123456789
+ - ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÅÉÍ
+ - !"#$%&\'()*+,./:;<=>?@[\\]^_`{|}~´”€|£ 
+ - UNK PAD
 
 
 ## One-hot vectors
