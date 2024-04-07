@@ -1,11 +1,11 @@
 # Hate Speech and Sentiment Classification Experiments
 
 
+
 ## Introduction 
 
 The design and development of 'Hate Speech Annotation Framework' (HS Annotation Framework) 
 is based on the research work reported on (Master’s Thesis) research paper - 
-
 Merja Kreivi-Kauppinen (2024) Hate Speech Detection of Dialectal, Granular and Urban Finnish. University of Oulu, Degree Programme in Computer Science and Engineering. Master’s Thesis, 111 p.
 
 ![Alt text](images/classification_models.png)
@@ -30,6 +30,7 @@ designed for Spacy (Spacy version 3.5.0) using large Finnish language model 'fi_
 Experimental Finnish Spacy+Voikko model was chosen for lemmatization because it was available for Python on Windows.
 
 
+
 ## Datasets
 
 Classification experiments tested new datasets of SA sentiment, SA polarity, HS binary and HS strength labels. 
@@ -40,11 +41,15 @@ Different setups of text processing were compared,
 therefore the samples were classified either as unprocessed ‘raw’ text samples, which did not contain any modification or cleaning of the content, 
 or as manually processed (‘correct’) text samples, where typos and granulated samples were changed into more correct form grammatically.
 
+
+
 ## Evaluation metrics
 
 Results of applied models were evaluated and compared with common performance metrics 
 accuracy (Acc), precision (Pre), recall (Rec), F1-score (F1), true positive rate (TPR) and false positive rate (FPR), 
 as the goal was to ensure that the best models have low false positive rate (FPR).
+
+
 
 ## SA and HSD Classification Experiments with AFINN and SentiStrength
 
