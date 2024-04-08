@@ -75,9 +75,24 @@ Table. The layer and parameter settings of Finnish BERT-LL models.
 
 ## Performance values
 
-The model with the lowest validation loss was saved as the best iteration of the network, as the best model is most likely one associated with a low validation loss. The saved model weights were returned as the best weights to calculate evaluation results on test data. 
+The model with the lowest validation loss was saved as the best iteration of the network, 
+as the best model is most likely one associated with a low validation loss. 
+The saved model weights were returned as the best weights to calculate evaluation results on test data. 
 
 Experimental models were evaluated with test data by measuring performance with accuracy, F1, precision, recall, FPR and TPR values.
 
 
+
+# FinBERT is included in HuggingFace transformers library.
+# Download the pretrained FinBert model as "TurkuNLP/bert-base-finnish-cased-v1"
+FinBERT = "TurkuNLP/bert-base-finnish-cased-v1"
+
+# Set FinBert tokenizer as "TurkuNLP/bert-base-finnish-cased-v1"
+BERT_TOKENIZER = BertTokenizer.from_pretrained(FinBERT)
+
+# get the size of tokenizer
+print('Tokenizer vocab size : ', len(BERT_TOKENIZER))
+
+# import Bert pretrained model
+BERT_MODEL = BertModel.from_pretrained("TurkuNLP/bert-base-finnish-cased-v1")
 
