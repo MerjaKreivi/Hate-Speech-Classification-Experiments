@@ -1,10 +1,9 @@
 # Data Analysis for Merja's Hate Speech (HS) Datasets
 
-<li> class / category analysis of labeled data
-<li> category analysis for 'raw' HS Samples
-<li> for 'original' HS dataset
-<li> for 'balanced' HS Dataset
-<li> BoC and BoE analysis
+<li> class / labe / category analysis of labeled data
+<li> string length analysis of data samples
+<li> BoC and BoE analysis for all dataset
+<li> string length, category, BoC and BoE analysis was done for 'raw' HS samples
 
 
 ## INTRODUCTION 
@@ -18,9 +17,14 @@ The scripts were created and published by Merja Kreivi-Kauppinen, and are part o
 
 Created datasets were evaluated by sample string length analysis and label categories distribution analysis.
 
+<li> category analysis for 'original' HS dataset - jupyter script HS_data_analysis.ipynb
+<li> category analysis for 'balanced' HS Dataset - jupyter script HS_data_analysis_BalancedDataset.ipynb
+
+
 ### BoC and BoE analysis
-<li> bag of characters (BoC) analysis for full Merja's HS dataset
-<li> bag of emojis (BoE) analysis for full Merja's HS dataset
+
+<li> bag-of-characters (BoC) and bag-of-emojis (BoE) analysis for full Merja's HS dataset
+<li> jupyter script BoC_and_BoE_analysis.ipynb
 
 Created dataset was evaluated by BoC and BoE analysis. BoC and BoE analysis was done for 'raw' HS samples.
 Data samples were pre-processed with lowercasing transformation. Characters and special characters of ‘raw’ text samples were analysed by feature extraction count vectorizer of sklearn 'feature_extraction' library. Result shows all character features found in created dataset. BoC analysis revealed Bag-of-Emojis (BoE) presented in data. 
