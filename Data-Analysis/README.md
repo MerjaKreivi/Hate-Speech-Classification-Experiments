@@ -5,8 +5,7 @@
 <li> for 'original' HS dataset
 <li> for 'balanced' HS Dataset
 <li> BoC and BoE analysis
-- bag of characters (BoC) analysis for full Merja's HS dataset
-- bag of emojis (BoE) analysis for full Merja's HS dataset
+
 
 ## INTRODUCTION 
 
@@ -14,6 +13,8 @@ The scripts were created and published by Merja Kreivi-Kauppinen, and are part o
 
 
 ## DATA ANALYSIS
+
+### Distribution analysis
 
 Created datasets were evaluated by sample string length analysis and label categories distribution analysis.
 
@@ -30,7 +31,7 @@ Data samples were pre-processed with lowercasing transformation. Characters and 
 The dataset of collected and generated research data is not shared or published.
 
 
-## Manually labeled HS dataset
+### Manually labeled HS dataset
 
 Every sample in dataset were labelled manually with trinary sentiment, multilabel polarity, and binary HS subcategory. 
 
@@ -48,7 +49,7 @@ Data samples belonging to the HS (‘HS’) subcategory (of HSbinary main catego
 - HS strength
 
 
-## SA sentiment
+### SA sentiment
 
 Every sample in dataset is labelled into ‘positive’, ‘neutral’, or ‘negative’ sentiment analysis subcategory on ‘sentiment’ main category.
 
@@ -56,21 +57,21 @@ Every sample in dataset is labelled into ‘positive’, ‘neutral’, or ‘ne
 - binary sentiment subcategory: ‘positive’ (incl. postive and neutral) or ‘negative’
 
 
-## SA polarity
+### SA polarity
 
 Every sample in dataset is labelled into sentiment polarization main category ‘polarity’, that is used to manual labelling of an estimate of overall sentiment polarity level into one of eleven polarity subcategory between -5 and 5.
 
 - polarity subcategory: ‘-5’, ‘-4’,‘-3’, ‘-2’, ‘-1’, ‘0’, ‘1’, ‘2’, ‘3’, ‘4’ or ‘5’
 
 
-## HSbinary
+### HSbinary
 
 On the main hate speech category ‘HSbinary’ every sample in dataset is labelled into HS subcategory - ‘HS’ or ‘not HS’ (as ‘not including hate speech’) by binary classification.
 
 - HSbinary subcategory: ‘HS’ or ‘not HS’
 
 
-## HStarget
+### HStarget
 
 On the HS target category ‘HStarget’, the HS sample was labeled into one HStarget subcategory.
 
@@ -84,7 +85,7 @@ On the HS target category ‘HStarget’, the HS sample was labeled into one HSt
 - ‘none’ (not identified or included)- In ‘none’-subcategory the target is not mentioned, or HS is presented as trolling, where clear target does not exist.
 
 
-## HStopic
+### HStopic
 
 HS topic category ‘HStopic’ was used to label every HS sample in dataset according to content into one or several topic subcategories.
 
@@ -92,7 +93,7 @@ HS topic category ‘HStopic’ was used to label every HS sample in dataset acc
 - national, ethnic, foreign, immigration, religion, politics, opinion, work, sexual, gender, women, appearance, health, status, social media, family, trolling, and other
 
 
-## HSform
+### HSform
 
 HS form category ‘HSform’ was used to label every HS sample in dataset according to content into one or several form, type, or style describing subcategories. 
 
@@ -102,7 +103,7 @@ HS form category ‘HSform’ was used to label every HS sample in dataset accor
 The undefined subcategory is available for complex cases to smooth manual labelling process.
 
 
-## HSstrength
+### HSstrength
 
 HS strength category ‘HSstrength’ was used to label every HS sample in dataset to dimension of HS according to rising hatefulness levels,  where subcategories provide an estimate of how hateful, hostile, violent, aggressive, harassing, harmful, abusive, and intentional a sample content is. 
 
