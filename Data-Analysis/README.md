@@ -5,10 +5,24 @@
 <li> for 'original' HS dataset
 <li> for 'balanced' HS Dataset
 <li> BoC and BoE analysis
+- bag of characters (BoC) analysis for full Merja's HS dataset
+- bag of emojis (BoE) analysis for full Merja's HS dataset
 
 ## INTRODUCTION 
 
 The scripts were created and published by Merja Kreivi-Kauppinen, and are part of research work carried in University of Oulu in 2020-2023. The study is reported on (Master’s Thesis) research paper - Merja Kreivi-Kauppinen (2024) Hate Speech Detection of Dialectal, Granular and Urban Finnish. University of Oulu, Degree Programme in Computer Science and Engineering. Master’s Thesis.
+
+
+## DATA ANALYSIS
+
+Created datasets were evaluated by sample string length analysis and label categories distribution analysis.
+
+### BoC and BoE analysis
+<li> bag of characters (BoC) analysis for full Merja's HS dataset
+<li> bag of emojis (BoE) analysis for full Merja's HS dataset
+
+Created dataset was evaluated by BoC and BoE analysis. BoC and BoE analysis was done for 'raw' HS samples.
+Data samples were pre-processed with lowercasing transformation. Characters and special characters of ‘raw’ text samples were analysed by feature extraction count vectorizer of sklearn 'feature_extraction' library. Result shows all character features found in created dataset. BoC analysis revealed Bag-of-Emojis (BoE) presented in data. 
 
 
 ## DATASET
@@ -22,7 +36,7 @@ Every sample in dataset were labelled manually with trinary sentiment, multilabe
 
 - SA trinary - trinary sentiment
 - SA polarity - multilabel polarity sentiment
-- HSbinary- binary HS
+- HSbinary - binary HS
 
 Polarity and sentiment subcategories summed up the individual components or sentiments of content. The presence or absence of HS in sample was labelled with HS binary categoriy - ‘not including hate speech’ (not HS) or ‘hate speech’ (HS). 
 
