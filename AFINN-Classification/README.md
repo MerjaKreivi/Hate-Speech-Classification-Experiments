@@ -2,12 +2,9 @@
 
 AFINN based SA and HSD models use modified version of original Afinn method.
 
-The scripts were created and published by Merja Kreivi-Kauppinen, and
-scripts are part of research work carried in University of Oulu in 2020-2023.
+The scripts were created and published by Merja Kreivi-Kauppinen, and are part of research work carried in University of Oulu in 2020-2023. 
 
-The study is reported on (Master’s Thesis) research paper - 
-Merja Kreivi-Kauppinen (2024) Signs of Paradigm Shift in Hate Speech Detection Methodology: Hate Speech Detection of Dialectal, Granular and Urban Finnish. 
-University of Oulu, Degree Programme in Computer Science and Engineering. Master’s Thesis, 111 p.
+The study is reported on (Master’s Thesis) research paper - Merja Kreivi-Kauppinen (2024) Hate Speech Detection of Dialectal, Granular and Urban Finnish. University of Oulu, Degree Programme in Computer Science and Engineering. Master’s Thesis.
 
 
 ## Original method and reference
