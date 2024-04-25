@@ -17,7 +17,7 @@ The main structure of combined BERT-NN model is divided into BERT model, linear 
 
 SA and HSD classification experiments were carried out with pre-trained Finnish BERT model (FinBERT). The SoftMax classifier is used to classify the predict of the sample.
 
-![alt text](images/BERT_LL_model.png){: width="50%"}
+<img src="images/BERT_LL_model.png" alt="alt text" width="200" />
 
 Figure. The process structure of BERT-LL classifier.
 
@@ -36,7 +36,7 @@ Figure. The process structure of BERT-LL classifier.
 
 Designed BERT classifiers were built on top of the pre-trained FinBERT model. The BERT model consists of twelve transformer layers, where each transformer layer is fed with a vector of embeddings, and each transformer layer produces the same number of embeddings with the same hidden size dimension on the output layer. The output of the final transformer layer fed the feature sequence of tokens to the feed-forward classifier, where two fully connected layers set the basic structure of the classification layers. The first layer of linear layers (LL) extracted the last hidden layer of the tokens, and the feature vectors are merged to collect the most characteristic features of the sample. The purpose of full connection layers was to facilitate the output of the net, where two dropout layers were set for regularization purposes. The output of the last classifier layer was fed to SoftMax function to classify the sample features into predicted classes. The cross-entropy loss (CE Loss) was used to calculate probability distribution over classes and to provide the final predicts of classification labels. 
 
-![alt text](images/FinBERT_model.png){: width="50%"}
+![alt text](images/FinBERT_model.png)
 
 Figure. The BERT-LL classifiers were built on pre-trained FinBERT model.
 
@@ -78,7 +78,7 @@ All experiments used the same FinBERT-LL model, where the training parameters we
 
 Table. The layer and parameter settings of Finnish BERT-LL models.
 
-![alt text](images/table_FinBERT.png){: width="50%"}
+![alt text](images/table_FinBERT.png)
 
 
 
