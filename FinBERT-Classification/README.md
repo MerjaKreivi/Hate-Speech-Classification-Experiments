@@ -46,15 +46,21 @@ For example, the HS category was classified as binary between ‘HS’ and ‘no
 for six-class classification task of ‘HS strength’ category output was six, and for eleven-class classification problem of ‘SA polarity’ category output was eleven. 
 
 
+# Pretrained BERT model for cased Finnish
+
+FinBERT is included in HuggingFace transformers library. 
+The pretrained FinBert model was downloaded as (FinBERT =) "TurkuNLP/bert-base-finnish-cased-v1".
+FinBert-based tokenizer was set with "TurkuNLP/bert-base-finnish-cased-v1" as BERT_TOKENIZER = BertTokenizer.from_pretrained(FinBERT).
+
 
 ## Preprocessing
 
 Text samples were not preprocessed before embeddings creation, as the only preprocess step was the removal of duplicates and to limit the sample string length into 850 or 300 characters. The effect of lemmatization on classification results was tested by lemmatizing samples with Finnish Spacy+Voikko method. The effect of emojis was tested by adding emojis and new alphabets and special characters into BERT model’s token list before training steps.
 
+
 ## Datasets
 
 BERT-LL classification models were tested with unprocessed ‘raw’ samples, manually processed ‘correct’ samples, all samples dataset (‘all data’) which contained both ‘raw’ and ‘correct’ samples, and balanced dataset. Because of lack of data, HS binary, SA trinary, or SA polarity sentiment lexicons including labeled words with sentiment values (built up for AFINN and SentiStrength classification methods) were added to dataset before splitting to train, validate, and test data to boost the training results. Classification experiments with HS strength labels and balanced dataset did not include any additional sentiment lexicon dataset. From every experiment wise dataset, 90% of the data was used as training data, 10% as validating data, and 10% as testing data. 
-
 
 
 ## Demonstration
@@ -66,11 +72,9 @@ On training steps, the AdamW optimizer was used to optimize the parameters with 
 All experiments used the same FinBERT-LL model, where the training parameters were adjusted according to the classifier, as studied sample data and label sets achieved the optimal classification effect when the parameters are adopted accordingly. The model design and parameters are shown in Table below.
 
 
-
 Table. The layer and parameter settings of Finnish BERT-LL models.
 
 ![alt text](images/table_FinBERT.png)
-
 
 
 ## Performance values
@@ -80,19 +84,3 @@ as the best model is most likely one associated with a low validation loss.
 The saved model weights were returned as the best weights to calculate evaluation results on test data. 
 
 Experimental models were evaluated with test data by measuring performance with accuracy, F1, precision, recall, FPR and TPR values.
-
-
-
-# FinBERT is included in HuggingFace transformers library.
-# Download the pretrained FinBert model as "TurkuNLP/bert-base-finnish-cased-v1"
-FinBERT = "TurkuNLP/bert-base-finnish-cased-v1"
-
-# Set FinBert tokenizer as "TurkuNLP/bert-base-finnish-cased-v1"
-BERT_TOKENIZER = BertTokenizer.from_pretrained(FinBERT)
-
-# get the size of tokenizer
-print('Tokenizer vocab size : ', len(BERT_TOKENIZER))
-
-# import Bert pretrained model
-BERT_MODEL = BertModel.from_pretrained("TurkuNLP/bert-base-finnish-cased-v1")
-
