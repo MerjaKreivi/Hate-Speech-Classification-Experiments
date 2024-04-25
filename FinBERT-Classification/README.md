@@ -17,7 +17,7 @@ The main structure of combined BERT-NN model is divided into BERT model, linear 
 
 SA and HSD classification experiments were carried out with pre-trained Finnish BERT model (FinBERT). The SoftMax classifier is used to classify the predict of the sample.
 
-<img src="images/BERT_LL_model.png" alt="alt text" width="200" />
+<img src="images/BERT_LL_model.png" alt="alt text" width="50%" />
 
 Figure. The process structure of BERT-LL classifier.
 
