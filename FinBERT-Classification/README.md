@@ -36,7 +36,7 @@ Figure. The process structure of BERT-LL classifier.
 
 Designed BERT classifiers were built on top of the pre-trained FinBERT model. The BERT model consists of twelve transformer layers, where each transformer layer is fed with a vector of embeddings, and each transformer layer produces the same number of embeddings with the same hidden size dimension on the output layer. The output of the final transformer layer fed the feature sequence of tokens to the feed-forward classifier, where two fully connected layers set the basic structure of the classification layers. The first layer of linear layers (LL) extracted the last hidden layer of the tokens, and the feature vectors are merged to collect the most characteristic features of the sample. The purpose of full connection layers was to facilitate the output of the net, where two dropout layers were set for regularization purposes. The output of the last classifier layer was fed to SoftMax function to classify the sample features into predicted classes. The cross-entropy loss (CE Loss) was used to calculate probability distribution over classes and to provide the final predicts of classification labels. 
 
-<img src="images/FinBERT_model.png" alt="alt text" width="80%" />
+<img src="images/FinBERT_model.png" alt="alt text" width="70%" />
 
 Figure. The BERT-LL classifiers were built on pre-trained FinBERT model.
 
@@ -78,7 +78,7 @@ All experiments used the same FinBERT-LL model, where the training parameters we
 
 Table. The layer and parameter settings of Finnish BERT-LL models.
 
-<img src="images/table_FinBERT.png" alt="alt text" width="80%" />
+<img src="images/table_FinBERT.png" alt="alt text" width="60%" />
 
 
 
