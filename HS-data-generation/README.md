@@ -62,3 +62,8 @@ Scripts use KW and 'key string' web-crawling methods for open data of YouTube AP
 Includes scripts to read, collect, and save textual data from YouTube comments and headlines.
 
 Collected data is printed out, and saved as SQL databases.
+
+
+## KORP Query -folder
+
+KORP_query-file in 'KORP Query'-folder includes query samples used for Suomi24 open dataframes in KORP API.

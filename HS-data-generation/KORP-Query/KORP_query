@@ -1,0 +1,185 @@
+# KORP query samples for Suomi24 open dataframes 
+# Download version of Suomi24 datafiles - https://korp.csc.fi/download/Suomi24/2017H2/
+
+# These query examples were used on the research work reported on research paper:
+
+# Merja Kreivi-Kauppinen (2024) Hate Speech Detection of Dialectal, Granular and Urban Finnish. 
+# University of Oulu, Degree Programme in Computer Science and Engineering. Master’s Thesis.
+
+
+# ---------------------------------------------------------------------------------------------------------------
+# positive sentiments
+
+[lemmas="suklaakakk.+"]|[lemma="ihan.+"]|[lemma="kaunis"]
+
+
+# ---------------------------------------------------------------------------------------------------------------
+# sexual hates peech and harassment
+
+[lemmas="tappa.+"]|[lemma="pieksä.+"]|[lemma="raiska.+"]
+([word="homo.+"]|[word="homo"]|[word="huora.+"]|[word="huora"]) []* [lemma="pitää"] []* [lemma="tappaa"]
+
+# even distribution of samples
+[lemma="tulla"] []* [lemma="ulos"] []* [lemma="kaappi"]
+
+
+# ---------------------------------------------------------------------------------------------------------------
+# opinionated hate speech
+
+[word="vihapuhe"]|[word="vihapuh.+"]
+
+[word="suvakki"]|[word="suvakit"]|[word="suvakkeja"]|[word="suvakkihuora"]|[word="suvakkihomo"]|[word="suvakki*"]|[word="suvakkien"]|[word="suvakkipuhe*"]
+
+[word="foliohattu*"]|[word="kukkahattu*"]
+[word="foliohattu.+"]|[word="kukkahattu.+"]|[word="foliohattu"]|[word="kukkahattu"]
+
+# about 4750 samples
+[word="yhteiskun.+"] []* [lemma="loinen"] 
+
+[lemma="lapsi"] []* [lemma="murha.+"] []* [lemma="abortti"]
+[lemma="mukavuus"] []* [lemma="abortti"]
+[lemma="lapsi"] []* [lemma="murha.+"]
+
+[word="ihmisroska.+"]|[word="ihmisjäte.+"]|[word="ihmissaast.+"]|[word="ihmispaska.+"]
+
+
+# ---------------------------------------------------------------------------------------------------------------
+# political hate speech
+
+[word="persu"]|[word="persuja"]|[word="persut"]|[word="persun"]|[word="persujen"]|[word="persuhan"]|[word="persuko"]|[word="persutko"]|[word="persuthan"]|[word="persujako"]
+[word="persu.+"]
+
+[word="sipilä.+"]|[word="sipilä"]
+([word="sipilä.+"]|[word="sipilä"]|[word="Sipilä.+"]|[word="Sipilä"]) []* [lemma="tappaa"]
+([word="sipilä.+"]|[word="sipilä"]|[word="Sipilä.+"]|[word="Sipilä"]) []* [lemma="pitää"] []* [lemma="tappaa"]
+
+# [word="trump.+"]|[word="trump"]
+# [word="trump.+"]|[word="trump"]|[word="Trump.+"]|[word="Trump"]
+[word="trump"]|[word="Trump"]|[word="trumppi"]|[word="Trumppi"]
+[word="putin.+"]|[word="putin"]|[word="Putin.+"]|[word="Putin"]
+
+
+# ---------------------------------------------------------------------------------------------------------------
+# verbal violance
+
+[lemma="viedä"] []* [lemma="sauna"] []* [lemma="taakse"]
+
+##([lemma="itse"]|[word="ittes"]|[word="itteni"]|[word="itte"]) []* [lemma="pitää"] []* [lemma="tappaa"]
+[word="tapa"] []* [word="ittes"]  # noin 1600 tulosta
+[lemma="tappaa"] []* [word="ittes"] # noin 1400
+
+# moderation trend (???)
+[lemma="vetää"] []* [word="ittes"] []* [lemma="hirsi"] # 335
+[lemma="pitää"] []* [lemma="vetää"] []* [lemma="hirsi"] # 334 (eri tulokset kuin yllä)
+
+[lemma="vetää"] []* [lemma="ranne"] []* [lemma="auki"] # 1185
+
+# about 5300 samples - includes HS samples
+([lemma="potkia"]|[lemma="pieksää"]|[lemma="raiskata"]|[lemma="hakata"]) []* ([word="kuoliaaksi"]|[word="hengiltä"]|[word="lopullisesti"])
+
+# zero samples
+([lemma="yhteiskunta"]|[lemma="loinen"]) []* [lemma="tappaa"] 
+[lemma="yhteiskunta"] []* [lemma="loinen"] []* [lemma="pitää"] []* [lemma="tappaa"]
+
+
+# ---------------------------------------------------------------------------------------------------------------
+# slang and urban words and language
+
+# noin 7620
+[word="noob"]|[word="nooby"]|[word="noobie"]|[word="noob.+"]
+[word="noob"]|[word="noob.+"]
+# noin 9340
+[word="noob"]|[word="nooby"]|[word="noobie"]|[word="noob.+"]|[word="n00b"]|[word="n00b.+"]
+# 13691
+[word="noob"]|[word="nooby"]|[word="noobie"]|[word="noob.+"]|[word="n00b"]|[word="n00b.+"]|[word="NOOB"]|[word="NOOB.+"]
+# 13798
+[word="noob"]|[word="nooby"]|[word="noobie"]|[word="noob.+"]|[word="n00b"]|[word="n00b.+"]|[word="NOOB"]|[word="NOOB.+"]|[word="N00B"]|[word="N00B.+"]
+# 1014
+[word="newbie"]|[word="newby"]|[word="newb.+"]
+# 1666
+[word="newbie"]|[word="newby"]|[word="newb.+"]|[word="NEWBIE"]|[word="NEWBY"]|[word="NEWB.+"]|[word="Newbie"]|[word="Newby"]|[word="Newb.+"]
+
+# annual search (?)
+[word="lol"]|[word="LOL"]|[word="Lol"]|[word="lol.+"]|[word="LOL.+"]|[word="Lol.+"]
+[word="prank"]|[word="prank.+"]|[word="Prank"]|[word="Prank.+"]|[word="PRANK"]|[word="PRANK.+"]
+[word="lmao"]|[word="lmao.+"]|[word="LMAO"]|[word="LMAO.+"]|[word="lmfao"]|[word="lmfao.+"]|[word="LMFAO"]|[word="LMFAO.+"]
+[word="lmao"]|[word="lmao.+"]|[word="LMAO"]|[word="LMAO.+"]|[word="lmfao"]|[word="lmfao.+"]|[word="LMFAO"]|[word="LMFAO.+"]|[word="Lmfao"]|[word="Lmfao.+"]|[word="Lmao"]|[word="Lmao.+"]
+
+# 1410
+[word="rofl"]|[word="ROFL"]|[word="Rofl"]|[word="rofl.+"]|[word="ROFL.+"]|[word="Rofl.+"]
+# 239
+[word="rotfl"]|[word="ROTFL"]|[word="Rotfl"]|[word="rotfl.+"]|[word="ROTFL.+"]|[word="Rotfl.+"]
+
+[word="REPS"]|[word="REPS.+"]|[word="reps"]|[word="reps.+"]|[word="Reps"]|[word="Reps.+"]
+
+# emoticons
+# >:I   >:(   -_-
+[word="XD"]|[word="XD.+"]|[word="X-D"]|[word="X-D.+"]|[word="Xd"]|[word="Xd.+"]|[word="xd"]|[word="xd.+"]|[word="Xb"]|[word="Xb.+"]
+[word="XD"]|[word="XD.+"]|[word="X-D"]|[word="X-D.+"]|[word="Xd"]|[word="Xd.+"]|[word="xd"]|[word="xd.+"]|[word="Xb"]|[word="Xb.+"]|[word=":D"]|[word=":D.+"]|[word=":-D"]|[word=":-D.+"]|[word=":d"]|[word=":d.+"]|[word=":d"]|[word=":d.+"]|[word=":b"]|[word=":b.+"]
+[word=":D"]|[word=":D.+"]|[word=":-D"]|[word=":-D.+"]|[word=":d"]|[word=":d.+"]|[word=":b"]|[word=":b.+"]
+
+# emojis
+🔥 😍 🔥  Ihmishirviö🤮
+😂😂 😁🤗   🙂  ä 😫  😉 😂 😤🤔🙁 😶😱 😨 😳 L🤔 	🤣 😈🤡 😯 🎅  🖕
+🤡 😀 😃 😄 😁 😆 😅 😂 🤣 ☺️ 😊 😇 🙂 🙃	😉	😌 😍 🙏 🤝 👍 👎 👊 ✊ 🤛 🤜 🤞 ✌️ 🤘 👌 👈 👉 👆 👇 ☝️ ✋ 🤚 💊 💉 🌡🚑 🚒
+
+[word="😂"]|[word="😁"]|[word="😉"]|[word="🙂"]|[word="🤗"]|[word="🤣"]|[word="👍"]
+[word="👎"]|[word="😫"]|[word="😤"]|[word="🙁"]|[word="🤡"]|[word="🤣"]|[word="😈"]
+
+
+# ---------------------------------------------------------------------------------------------------------------
+# swearing and swear words
+
+# imho
+# vv  VV Vv V-V v-v 
+
+# 5182
+[word="viddu.+"]|[word="viddu"]  
+
+[word="mut.u.+"]
+[word="v...u.+"]
+[word="helv...n.+"]
+
+### 1150 erilaista sanaa, myös monta versiota ko. sanalle, Tuloksia: 590 601
+[word="v...u+"] 		
+[word="vi?t?t?u?"]
+
+### Arvoja: 740 erilaista sanaa, Tuloksia: 427 858
+[word="v...u"]			
+
+
+# ---------------------------------------------------------------------------------------------------------------
+# bullying and bully words
+
+# kakara, penska, penikka, äpärä, idiootti , älykääpiö , pillu , frigidi , pölkkypää , akka
+
+# 91 513
+[word="mamu"]|[word="mamut"]|[word="mamuja"]|[lemma="mamu"]  
+# 4322
+[word="ählämi"]|[word="ähläm"]|[word="ähläm*"]|[lemma="ählämi"]|[word="ählämit"]|[word="ählämihän"]|[word="ählämikö"]|[word="ählämien"]|[word="ählämeitä"] 
+
+# samples 22 236
+[word="evvk"]|[word="evvvk"]|[word="evv*"]|[word="EVVK"]|[word="EVVVK"]|[word="EVV*"]|[word="Evvk"]|[word="Evv*"]|[word="Evvvk"]
+
+# about 2000 samples
+[lemma="tumpelo"]|[lemma="tollo"]|[lemma="dorka"]|[lemma="mäntti"]|[lemma="lahoaivo"]|[lemma="pöhlö"]
+
+[lemma="puupää"]|[lemma="paskapää"]|[lemma="kusipää"]|[lemma="vittupää"] paskanaama
+
+[lemma="dille"]|[lemma="taliaivo"]|[lemma="pissis"]|[lemma="mäntti"]|[lemma="lahoaivo"]|[lemma="pöhlö"]|[lemma="nynny"]|[lemma="luuseri"]
+[lemma="dille"]|[lemma="taliaivo"]|[lemma="dummy"]|[lemma="mäntti"]|[lemma="lahoaivo"]|[lemma="pöhlö"]|[lemma="nynny"]
+
+# For example, the book 'Suuri solvaussanakirja' written by author Jari Tammi includes about 23 000 bully words in Finnish.
+# The most used bully words in Finnish language are 
+#  1. Juntti
+#  2. Tyhmä
+#  3. Hullu
+#  4. Sika
+#  5. Huora
+#  6. Homo
+#  7. Paskapää
+#  8. Läski
+#  9. Nynny
+#  10. Runkkari
+
+# The End -------------------------------------------------------------------------------------------------------
